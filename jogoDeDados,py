@@ -1,0 +1,36 @@
+"""Jogo de dados
+O Jogador que somar mais pontos em duas jogadas é o vencedor
+"""
+
+import random
+dado1_jogado = random.randint(1, 6)  #Esses são os dados com numero de 1 a 6
+dado2_jogado = random.randint(1, 6)
+
+
+#Função de jogador que faz duas jogadas aleatorias e soma as duas, retornando o valor total
+def jogador1():
+    tentativa1 = dado1_jogado
+    tentativa2 = dado1_jogado
+    total_pontos = tentativa1 + tentativa2
+    print('Total de pontos do Jogador 1 foi de', total_pontos) 
+    return total_pontos
+
+def jogador2():
+    tentativa1 = dado2_jogado
+    tentativa2 = dado2_jogado
+    total_pontos = tentativa1 + tentativa2
+    print('Total de pontos do Jogador 2 foi de', total_pontos)
+    return total_pontos
+
+resultado1 = jogador1()
+resultado2 = jogador2()
+
+#Compara os resultados e define um vencedor ou empate
+if resultado1 > resultado2:
+    print('O Jogador 1 Venceu')
+elif resultado2 > resultado1:
+    print('O Jogador 2 Venceu')
+elif resultado1 == resultado2:
+    print('Os jogadores empataram')
+else:
+    print('Houve um ERRO')
